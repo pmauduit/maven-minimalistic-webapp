@@ -1,4 +1,5 @@
-FROM jetty
+FROM tomcat
 
-ADD  target/minimalistic.war /var/lib/jetty/webapps/
+RUN rm -rf /usr/local/tomcat/webapps/*
+ADD  target/minimalistic.war /usr/local/tomcat/webapps/
 
